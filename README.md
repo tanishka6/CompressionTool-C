@@ -6,78 +6,66 @@
 *DURATION*: 4 WEEKS;
 *MENTOR*: NEELA SANTHOSH KUMAR
 
-📦 Project Title: File Compression and Decompression in C
+🧩 Project Title: RLE String Compression and Decompression in C
 💻 Platform Used: Dev C++
 🎓 Learning Sources: YouTube, GeeksforGeeks, ChatGPT
 🧾 Description:
-This project implements a basic file compression and decompression system in C using Run-Length Encoding (RLE) — a simple and effective data compression technique.
+This C program implements a Run-Length Encoding (RLE) algorithm to compress and decompress string data stored in files. The program performs two main operations:
 
-The program allows users to:
+Compression — Reads a string from input.txt, compresses it using RLE, and writes the result to compressed.txt.
 
-Compress the contents of a text file (e.g., "aaabbc" → "a3b2c1")
+Decompression — Reads the compressed RLE string from compressed.txt and reconstructs the original string into decompressed.txt.
 
-Decompress a file encoded in RLE format back to its original form
+🔍 How It Works:
+✅ Compression Phase
+Reads the input text character by character.
 
-Perform these operations through a user-friendly, menu-driven interface
+Replaces sequences of repeated characters with the character followed by its count.
 
-🔍 Key Features:
-✅ Compression Logic:
-Reads the input file character by character.
+Example:
+"aaabbc" → "a3b2c1"
 
-Counts consecutive repeating characters.
+✅ Decompression Phase
+Reads character-number pairs from the compressed file.
 
-Writes the character followed by the count to the output file using fprintf().
+Repeats each character based on the number that follows it.
 
-✅ Decompression Logic:
-Reads the compressed file character and count pair.
+Reconstructs the original string and saves it into a new file.
 
-Writes the character count times into the output file using fputc().
+✅ File I/O Handling
+Uses standard file pointers: fopen, fgetc, fputc, fprintf, ungetc, fclose.
 
-✅ Interactive Menu:
-Offers three choices: compress, decompress, or exit.
+Handles both alphabetic characters and numeric count extraction robustly using isdigit and ungetc.
 
-Prompts the user for input and output file names.
+📘 Example Workflow:
+input.txt:
+aaaaabbcc
 
-📘 Example:
-If the input file contains:
+compressed.txt:
+a5b2c2
 
-nginx
-Copy
-Edit
-aaaabbcc
-The compressed file will store:
+decompressed.txt:
+aaaaabbcc
 
-nginx
-Copy
-Edit
-a4b2c2
-After decompression, the output file will restore the original:
+✅ Key Concepts Practiced:
+File handling in C (fopen, fgetc, fputc, fprintf, fclose)
 
-nginx
-Copy
-Edit
-aaaabbcc
-✅ Concepts Practiced:
-File handling (fopen, fgetc, fputc, fprintf, fscanf)
+Run-Length Encoding (RLE) algorithm
 
-String manipulation and I/O operations
+Buffering and character processing
 
-Run-Length Encoding logic (RLE)
+Use of isdigit(), ungetc() for parsing character-count pairs
 
-Error handling and user input validation
-
-Menu-driven programming in C
+Defensive programming with error handling for file access
 
 💡 Learning Outcome:
-This project helped me understand how compression algorithms work, how to manipulate files at a low level, and how to build interactive CLI applications. It gave me practical exposure to both reading/writing files and implementing real-world data encoding methods.
+This project deepened my understanding of file I/O, data compression techniques, and string manipulation in C. It also helped me practice writing reusable functions and organizing code into logical modules for compression and decompression tasks.
 
 📚 Acknowledgments:
-Built with guidance and references from:
+This project was built with help from:
 
-YouTube tutorials (for RLE logic visualization)
+YouTube tutorials for visualizing RLE logic
 
-GeeksforGeeks (for file handling syntax and patterns)
+GeeksforGeeks for C file handling references
 
-ChatGPT (for debugging and refining logic)
-
-OUTPUT:
+ChatGPT for logic refinement and error handling support
