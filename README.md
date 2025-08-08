@@ -1,2 +1,8 @@
 # CompressionTool-C
+*COMPANY*: CODTECH IT SOLUTIONS;
+*NAME*: TANISHKA GARIYA;
+*INTERN ID*: CT04DH2132;
+*DOMAIN*: C PROGRAMMING;
+*DURATION*: 4 WEEKS;
+*MENTOR*: NEELA SANTHOSH KUMAR
 C program for compressing and decompressing files using basic techniques
